@@ -41,7 +41,7 @@ const AuctionDetail = () => {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
-        const response = await axios.get(`https://auction-backend-hjvs.onrender.com/api/auctions/${id}`, {
+        const response = await axios.get(`/api/auctions/${id}`, {
           headers: {
             authorization: `Bearer ${userInfo.token}`,
           },
