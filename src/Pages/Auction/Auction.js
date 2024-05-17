@@ -40,7 +40,7 @@ function AuctionPage() {
     const fetchProducts = async () => {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
-        const response = await axios.get('https://auction-backend-hjvs.onrender.com'); // replace with your API endpoint
+        const response = await axios.get('https://auction-backend-hjvs.onrender.com/api/auctions'); // replace with your API endpoint
         dispatch({ type: 'FETCH_SUCCESS', payload: response.data });
       } catch (err) {
         console.log(err);
